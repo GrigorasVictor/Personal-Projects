@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container-fluid {
+            background-color: #fff;
+            margin-top: 1vh;
+            padding: 3%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            height: 50%;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .blank-space {
+            width: 100%;
+            margin-top: 10%;
+            margin-bottom: 1vh;
+        }
+
+        .container-selection {
+            background-color: #4caf50;
+            margin-top: 1vh;
+            margin-right: 1vh;
+            margin-left: 1vh;
+            flex: 1;
+            padding: 3%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            height: 30%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .container-selection.dark-background {
+            background-color: #388e3c;
+        }
+
+        .title {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .titlebox {
+            margin-top: 20%;
+            font-size: 60%;
+            width: 100%;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 24px;
+            margin: 0;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<form method="post" class="container-fluid" th:action="@{/userSelector}">
+    <input type="hidden" name="selector" th:value="${selector}" />
+    <div class="title"><h2>Select one box</h2></div>
+
+    <div class="container-selection" onclick="toggleAndSetSelector(this, '1')">
+        <div class="titlebox"><h2>1</h2></div>
+    </div>
+
+    <div class="container-selection" onclick="toggleAndSetSelector(this, '2')">
+        <div class="titlebox"><h2>2</h2></div>
+    </div>
+
+    <div class="container-selection" onclick="toggleAndSetSelector(this, '3')">
+        <div class="titlebox"><h2>3</h2></div>
+    </div>
+
+    <div class="container-selection" onclick="toggleAndSetSelector(this, '4')">
+        <div class="titlebox"><h2>4</h2></div>
+    </div>
+
+    <div class="container-selection" onclick="toggleAndSetSelector(this, '5')">
+        <div class="titlebox"><h2>5</h2></div>
+    </div>
+
+    <div class="container-selection" onclick="toggleAndSetSelector(this, '6')">
+        <div class="titlebox"><h2>6</h2></div>
+    </div>
+
+    <div class="container-selection" onclick="toggleAndSetSelector(this, '7')">
+        <div class="titlebox"><h2>7</h2></div>
+    </div>
+
+    <div class="container-selection" onclick="toggleAndSetSelector(this, '8')">
+        <div class="titlebox"><h2>8</h2></div>
+    </div>
+
+    <div class="blank-space">
+        <button type="submit">Select</button>
+        <button type="button" th:onclick="|window.location.href='/'|">Logout</button>
+        <button type="button" class="link-button">
+            <a href="https://drive.google.com/file/d/1DKSqemRbkX-b4zH6ubqWnSEhMZHNIpYR/view?usp=sharing" download="example.pdf">Instructions</a>
+        </button>
+    </div>
+</form>
+    <script>
+        function toggleDarkBackground(element) {
+            const containers = document.getElementsByClassName('container-selection');
+            for (let i = 0; i < containers.length; i++)
+                containers[i].classList.remove('dark-background');
+            element.classList.add('dark-background');
+        }
+        function toggleAndSetSelector(element, value) {
+            toggleDarkBackground(element);
+            document.getElementsByName('selector')[0].value = value;
+        }
+    </script>
+</form>
+</body>
+</html>

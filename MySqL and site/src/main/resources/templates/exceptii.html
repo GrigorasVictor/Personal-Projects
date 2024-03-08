@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Exceptii</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container-fluid {
+            background-color: #fff;
+            margin-top: 1vh;
+            padding: 3%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            width: 60%;
+            height: 30%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        table {
+            width: 70%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            order: 2;
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            background-color: #f5f5f5;
+        }
+
+        th {
+            background-color: #4caf50;
+            color: #fff;
+        }
+
+        table, th, td {
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nume Firma</th>
+            <th>Stare</th>
+            <th>Oras</th>
+            <th>Natura</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="dataf: ${dataf}">
+            <td th:text="${dataf.idf}"></td>
+            <td th:text="${dataf.numef}"></td>
+            <td th:text="${dataf.stare}"></td>
+            <td th:text="${dataf.oras}"></td>
+            <td th:text="${dataf.natura}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <button type="button" th:onclick="|window.location.href='/redirectAdmin'|">Redirect back</button>
+</div>
+</body>
+</html>

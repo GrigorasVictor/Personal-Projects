@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Subject-5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container-fluid {
+            background-color: rgba(76, 175, 80, 0.94);
+            margin-top: 1vh;
+            padding: 3%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 20%;
+            height: 50%;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .container-fluid-input {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            width: 300px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            height: 34px;
+            margin-bottom: 16px;
+        }
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<form method="post" class="container-fluid text-center" th:action="@{/subject5}" th:object="${query5}">
+    <div class="container-fluid-input">
+        <label for="table">Table:</label>
+        <select id="table" class="input" required>
+            <option value="livrari">Livrari</option>
+        </select>
+        <select id="first-column" class="input" th:field="*{oras}" required>
+            <option value="Cluj-Napoca">Cluj-Napoca</option>
+            <option value="Arad">Arad</option>
+            <option value="Bacau">Bacau</option>
+            <option value="Brașov">Brașov</option>
+            <option value="București">București</option>
+            <option value="Constanța">Constanța</option>
+            <option value="Craiova">Craiova</option>
+            <option value="Sibiu">Sibiu</option>
+            <option value="Timișoara">Timișoara</option>
+            <option value="Bistrița">Bistrița</option>
+        </select>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+</body>
+</html>
+

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Subject-2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container-fluid {
+            background-color: #fff;
+            margin-top: 1vh;
+            padding: 3%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            height: 50%;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .container-fluid-input {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            width: 300px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            height: 34px;
+            margin-bottom: 16px;
+        }
+
+        .wrap {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 15px;
+            border-radius: 5px;
+            background: linear-gradient(to right, #d3d3d3 0%, #4caf50 100%);
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #4caf50;
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #4caf50;
+            cursor: pointer;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10%;
+        }
+        table {
+            width: 70%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            order: 2;
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            background-color: #f5f5f5;
+        }
+
+        th {
+            background-color: #4caf50;
+            color: #fff;
+        }
+
+        table, th, td {
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .range-inputs {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .range-inputs input {
+            width: 60px;
+            text-align: center;
+            margin: 0 5px;
+        }
+
+        #max-gap {
+            width: 50px; /* Adjust the width as needed */
+        }
+    </style>
+</head>
+<body>
+<form method="post" class="container-fluid text-center">
+    <div class="container-fluid-input">
+        <label for="table">Table:</label>
+        <select id="table" class="input" required>
+            <option value="componente">Componente</option>
+        </select>
+        <select id="first-column" class="input" required>
+            <option value="Cluj-Napoca">Cluj-Napoca</option>
+            <option value="Arad">Arad</option>
+            <option value="Bacau">Bacau</option>
+            <option value="Brașov">Brașov</option>
+            <option value="București">București</option>
+            <option value="Constanța">Constanța</option>
+            <option value="Craiova">Craiova</option>
+            <option value="Sibiu">Sibiu</option>
+            <option value="Timișoara">Timișoara</option>
+        </select>
+        <div class="wrap">
+            <label for="range">Cantitate :</label>
+            <input type="range" id="range" name="range" min="100" max="2000" value="50" class="slider" step="10"/>
+            <div class="range-inputs">
+                <input type="text" id="range-start" name="rangeStart" readonly>
+                <input type="text" id="range-end" name="rangeEnd" readonly>
+            </div>
+        </div>
+
+        <div class="wrap">
+            <label for="max-gap">Gap:</label>
+            <input type="number" id="max-gap" name="maxGap" min="10" max="100"/>
+        </div>
+
+        <button type="button" th:onclick="|window.location.href='/subjectredirect'|">Redirect back</button>
+    </div>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nume furnizor</th>
+            <th>Culoare</th>
+            <th>Masa</th>
+            <th>Oras</th>
+        </tr>
+        </thead>
+        <tbody>
+        <th:block th:each="dataf  : ${dataf}">
+            <tr>
+                <td>[[${dataf.idc}]]</td>
+                <td>[[${dataf.numec}]]</td>
+                <td>[[${dataf.culoare}]]</td>
+                <td>[[${dataf.masa}]]</td>
+                <td>[[${dataf.oras}]]</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+</form>
+<script>
+    const range = document.getElementById('range');
+    const rangeStart = document.getElementById('range-start');
+    const rangeEnd = document.getElementById('range-end');
+    const maxGapInput = document.getElementById('max-gap');
+
+    range.addEventListener('input', () => {
+        const value = parseInt(range.value, 10);
+        rangeStart.value = value;
+        rangeEnd.value = value + 100;
+    });
+
+    maxGapInput.addEventListener('input', () => {
+        const maxGap = parseInt(maxGapInput.value, 10);
+        range.step = maxGap.toString();
+    });
+</script>
+</body>
+</html>
+

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Subject-1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container-fluid {
+            background-color: #fff;
+            margin-top: 1vh;
+            padding: 3%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            height: 50%;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .container-fluid-full {
+            width: 100%; /* Make it cover the entire width */
+        }
+
+        .container-fluid-input {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            width: 300px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            height: 34px;
+            margin-bottom: 16px;
+        }
+
+        .wrap {
+            width: 25%;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<form method="post" class="container-fluid container-fluid-full text-center" th:action="@{/subject1}" th:object="${query1}">
+    <div class="container-fluid-input">
+        <label for="table">Table:</label>
+        <select id="table" class="input" required>
+            <option value="furnizori">Furnizori</option>
+        </select>
+        <select id="first-column" class="input" th:field="*{string1}" required>
+            <option value="numef">Nume furnizor</option>
+            <option value="idf">ID</option>
+            <option value="oras">Oras</option>
+            <option value="stare">Stare</option>
+        </select>
+        <div class="wrap">
+            <div class="input">
+                <select th:field="*{bool1}" required>
+                    <option value="true">ASC</option>
+                    <option value="false">DSC</option>
+                </select>
+            </div>
+        </div>
+        <select id="second-column" class="input" th:field="*{string2}" required>
+            <option value="numef">Nume furnizor</option>
+            <option value="idf">ID</option>
+            <option value="oras">Oras</option>
+            <option value="stare">Stare</option>
+        </select>
+        <div class="wrap">
+            <div class="input">
+                <select th:field="*{bool2}" required>
+                    <option value="true">ASC</option>
+                    <option value="false">DSC</option>
+                </select>
+            </div>
+        </div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+</body>
+</html>

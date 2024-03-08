@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1668426878 source:d:\!_scoala_!\proiecte laborator\tema seminar 5\problema 1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"minesweeper.h"
+
+1668265723 d:\!_scoala_!\proiecte laborator\tema seminar 5\problema 1\minesweeper.h
+
+1668429498 source:d:\!_scoala_!\proiecte laborator\tema seminar 5\problema 1\minesweeper.c
+	<stdio.h>
+	<stdlib.h>
+	"minesweeper.h"
+

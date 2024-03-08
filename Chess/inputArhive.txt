@@ -1,0 +1,13 @@
+
+*******Current Date and Time: 2024-01-10 09:03:39*******
+Pion-Alb --> E2 E4
+Pion-Negru --> E7 E5
+
+E2 E4
+
+
+*******Current Date and Time: 2024-01-13 17:12:16*******
+Pion-Alb --> A2 A4
+Pion-Negru --> B7 B5
+Pion-Alb --> A4 A5
+Pion-Negru --> B5 A4

@@ -1,0 +1,3 @@
+D:/Scoala/Semestrul2/SDA/lab8/sudoku/cmake-build-debug/CMakeFiles/sudoku.dir
+D:/Scoala/Semestrul2/SDA/lab8/sudoku/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Scoala/Semestrul2/SDA/lab8/sudoku/cmake-build-debug/CMakeFiles/rebuild_cache.dir

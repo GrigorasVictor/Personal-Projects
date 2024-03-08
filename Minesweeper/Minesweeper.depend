@@ -1,0 +1,75 @@
+# depslib dependency file v1.0
+1671403296 source:d:\!_scoala_!\proiecte laborator\tema seminar 11\problema 1\minesweeper.c
+	<stdio.h>
+	<stdlib.h>
+	"minesweeper.h"
+	<ctype.h>
+
+1671197378 d:\!_scoala_!\proiecte laborator\tema seminar 11\problema 1\minesweeper.h
+
+1671403499 source:d:\!_scoala_!\proiecte laborator\tema seminar 11\problema 1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"minesweeper.h"
+	<string.h>
+
+1673121951 source:c:\users\victor\desktop\scoala\faculta\problema 1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"minesweeper.h"
+	<string.h>
+
+1673107999 c:\users\victor\desktop\scoala\faculta\problema 1\minesweeper.h
+
+1673121940 source:c:\users\victor\desktop\scoala\faculta\problema 1\minesweeper.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<math.h>
+	<string.h>
+
+1673293713 source:d:\scoala\proiectelaborator\tema seminar 11\problema 1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"minesweeper.h"
+	<string.h>
+
+1673107999 d:\scoala\proiectelaborator\tema seminar 11\problema 1\minesweeper.h
+
+1673294152 source:d:\scoala\proiectelaborator\tema seminar 11\problema 1\minesweeper.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<math.h>
+	<string.h>
+
+1673293713 source:d:\scoala\proiectelaborator\temaseminar11\problema1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"minesweeper.h"
+	<string.h>
+
+1673107999 d:\scoala\proiectelaborator\temaseminar11\problema1\minesweeper.h
+
+1673514649 source:d:\scoala\proiectelaborator\temaseminar11\problema1\minesweeper.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<math.h>
+	<string.h>
+
+1688135305 source:c:\users\victor\desktop\minesweeper\main.c
+	<stdio.h>
+	<stdlib.h>
+	"minesweeper.h"
+	<string.h>
+
+1688972588 c:\users\victor\desktop\minesweeper\minesweeper.h
+
+1688974950 source:c:\users\victor\desktop\minesweeper\minesweeper.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"minesweeper.h"
+	<ctype.h>
+
