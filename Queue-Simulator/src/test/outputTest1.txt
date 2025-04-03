@@ -1,0 +1,143 @@
+Strategy: Shortest Queue Strategy for Input: NumberOfTasks: 4, NumberOfQueues: 2
+Creating Servers.......................
+Server 1 created......
+Server 2 created......
+Creating Tasks.......................
+Task{ID=1, arrivalTime=11, serviceTime=4} created.....
+Task{ID=2, arrivalTime=6, serviceTime=4} created.....
+Task{ID=3, arrivalTime=11, serviceTime=4} created.....
+Task{ID=4, arrivalTime=23, serviceTime=3} created.....
+Begin simulation....
+
+Time: 1
+Waiting Queue:[ (2,6,4) (1,11,4) (3,11,4) (4,23,3)]
+Queue 1 :[]
+Queue 2 :[]
+
+Time: 2
+Waiting Queue:[ (2,6,4) (1,11,4) (3,11,4) (4,23,3)]
+Queue 1 :[]
+Queue 2 :[]
+
+Time: 3
+Waiting Queue:[ (2,6,4) (1,11,4) (3,11,4) (4,23,3)]
+Queue 1 :[]
+Queue 2 :[]
+
+Time: 4
+Waiting Queue:[ (2,6,4) (1,11,4) (3,11,4) (4,23,3)]
+Queue 1 :[]
+Queue 2 :[]
+
+Time: 5
+Waiting Queue:[ (2,6,4) (1,11,4) (3,11,4) (4,23,3)]
+Queue 1 :[]
+Queue 2 :[]
+
+Time: 6
+Waiting Queue:[ (1,11,4) (3,11,4) (4,23,3)]
+Queue 1 :[(2,6,4)]
+Queue 2 :[]
+
+Time: 7
+Waiting Queue:[ (1,11,4) (3,11,4) (4,23,3)]
+Queue 1 :[(2,6,3)]
+Queue 2 :[]
+
+Time: 8
+Waiting Queue:[ (1,11,4) (3,11,4) (4,23,3)]
+Queue 1 :[(2,6,2)]
+Queue 2 :[]
+
+Time: 9
+Waiting Queue:[ (1,11,4) (3,11,4) (4,23,3)]
+Queue 1 :[(2,6,1)]
+Queue 2 :[]
+
+Time: 10
+Waiting Queue:[ (1,11,4) (3,11,4) (4,23,3)]
+Queue 1 :[]
+Queue 2 :[]
+
+Time: 11
+Waiting Queue:[ (4,23,3)]
+Queue 1 :[(1,11,4)]
+Queue 2 :[(3,11,4)]
+
+Time: 12
+Waiting Queue:[ (4,23,3)]
+Queue 1 :[(1,11,3)]
+Queue 2 :[(3,11,3)]
+
+Time: 13
+Waiting Queue:[ (4,23,3)]
+Queue 1 :[(1,11,2)]
+Queue 2 :[(3,11,2)]
+
+Time: 14
+Waiting Queue:[ (4,23,3)]
+Queue 1 :[(1,11,1)]
+Queue 2 :[(3,11,1)]
+
+Time: 15
+Waiting Queue:[ (4,23,3)]
+Queue 1 :[(1,11,0)]
+Queue 2 :[]
+
+Time: 16
+Waiting Queue:[ (4,23,3)]
+Queue 1 :[]
+Queue 2 :[]
+
+Time: 17
+Waiting Queue:[ (4,23,3)]
+Queue 1 :[]
+Queue 2 :[]
+
+Time: 18
+Waiting Queue:[ (4,23,3)]
+Queue 1 :[]
+Queue 2 :[]
+
+Time: 19
+Waiting Queue:[ (4,23,3)]
+Queue 1 :[]
+Queue 2 :[]
+
+Time: 20
+Waiting Queue:[ (4,23,3)]
+Queue 1 :[]
+Queue 2 :[]
+
+Time: 21
+Waiting Queue:[ (4,23,3)]
+Queue 1 :[]
+Queue 2 :[]
+
+Time: 22
+Waiting Queue:[ (4,23,3)]
+Queue 1 :[]
+Queue 2 :[]
+
+Time: 23
+Waiting Queue:[ ]
+Queue 1 :[(4,23,3)]
+Queue 2 :[]
+
+Time: 24
+Waiting Queue:[ ]
+Queue 1 :[(4,23,2)]
+Queue 2 :[]
+
+Time: 25
+Waiting Queue:[ ]
+Queue 1 :[(4,23,1)]
+Queue 2 :[]
+
+Time: 26
+Waiting Queue:[ ]
+Queue 1 :[]
+Queue 2 :[]
+
+Simulation ended!
+Average Waiting: 0.0, Average Service: 3.75, Peak Hour: 11
