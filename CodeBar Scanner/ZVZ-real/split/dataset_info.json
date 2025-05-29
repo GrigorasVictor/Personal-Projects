@@ -1,8 +1,0 @@
-{
-    "images_folder": "Image",
-    "masks_folder": null,
-    "masks_format": "barcode_xml",
-    "num_images": 921,
-    "objects_folder": "Markup",
-    "objects_format": "barcode_xml"
-}
